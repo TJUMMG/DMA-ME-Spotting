@@ -16,6 +16,7 @@ The codes need to run in the environment: Python 3.7.
 
 ### Testing
 Firstly, download the two datasets used for experiments: CAS(ME)^2 and SAMM Long Videos.
+Download “shape_predictor_68_face_landmarks.dat” from the following link: https://pan.baidu.com/s/1_Ml4D6lN1_1HeGAb7kGy1Q with password ‘msfd’ and place it under directory ‘D&M-A ME spotting\code\landmark_model’
 
 Secondly, run the following codes to reproduce the LBP feature based results provided in the paper:
 
