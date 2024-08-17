@@ -6,7 +6,7 @@ import xlrd
 import xlwt
 
 
-p68 = "/DMA_ME_spotting/code/landmark_model/shape_predictor_68_face_landmarks.dat"
+p68 = "/landmark_model/shape_predictor_68_face_landmarks.dat"
 detector = dlib.get_frontal_face_detector()
 predictor_68 = dlib.shape_predictor(p68)
 
