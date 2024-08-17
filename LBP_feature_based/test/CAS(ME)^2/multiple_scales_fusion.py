@@ -24,7 +24,7 @@ def calculate_IOU(interval1, interval2):
 
 
 def get_GT_intervals_for_video(sub, video_name):
-    workpath = r'D:\ME_Database_Download\CAS(ME)^2\CAS(ME)^2code_final.xlsx'  # path of CAS(ME)^2 label file
+    workpath = '/dataset/CAS(ME)^2/CAS(ME)^2code_final.xlsx'  # path of CAS(ME)^2 label file
     data = xlrd.open_workbook(workpath)
     code_final = data.sheet_by_name('CASMEcode_final')
     name_rule1 = data.sheet_by_name('naming rule1')
@@ -62,8 +62,8 @@ def get_GT_intervals_for_video(sub, video_name):
 
 def get_spotted_intervals_for_video(video_name, window_len_1, peaklr_len_1, p_1, window_len_2, peaklr_len_2, p_2):
     # scale1-symmetric
-    contrast_differences_path_1 = r'..\..\..\results\contrast differences\CAS(ME)^2_LBP_contrast_differences' + '\\' + 'window_len_' + str(window_len_1)
-    workpath_1 = contrast_differences_path_1 + '\\' + 's' + video_name[:2] + '\\' + video_name[:-4] + '\\' + 'contrast_differences.xls'
+    contrast_differences_path_1 = '/results/contrast_differences/CAS(ME)^2_LBP_contrast_differences' + '/' + 'window_len_' + str(window_len_1)
+    workpath_1 = contrast_differences_path_1 + '/' + 's' + video_name[:2] + '/' + video_name[:-4] + '/' + 'contrast_differences.xls'
     data_1 = xlrd.open_workbook(workpath_1)
     data_v_1 = data_1.sheet_by_name('sheet1')
     rowNum_dv_1 = data_v_1.nrows
@@ -78,8 +78,8 @@ def get_spotted_intervals_for_video(video_name, window_len_1, peaklr_len_1, p_1,
     Thr_1 = Cmean_1 + epsilon_1 * (Cmax_1 - Cmean_1)
 
     # scale2-symmetric
-    contrast_differences_path_2 = r'..\..\..\results\contrast differences\CAS(ME)^2_LBP_contrast_differences' + '\\' + 'window_len_' + str(window_len_2)
-    workpath_2 = contrast_differences_path_2 + '\\' + 's' + video_name[:2] + '\\' + video_name[:-4] + '\\' + 'contrast_differences.xls'
+    contrast_differences_path_2 = '/results/contrast_differences/CAS(ME)^2_LBP_contrast_differences' + '/' + 'window_len_' + str(window_len_2)
+    workpath_2 = contrast_differences_path_2 + '/' + 's' + video_name[:2] + '/' + video_name[:-4] + '/' + 'contrast_differences.xls'
     data_2 = xlrd.open_workbook(workpath_2)
     data_v_2 = data_2.sheet_by_name('sheet1')
     rowNum_dv_2 = data_v_2.nrows
@@ -187,7 +187,7 @@ def get_spotted_intervals_for_video(video_name, window_len_1, peaklr_len_1, p_1,
 
 
 def Evaluate_CASme2(window_len_1, peaklr_len_1, p_1, window_len_2, peaklr_len_2, p_2):
-    folder_data = r'D:\ME_Database_Download\CAS(ME)^2\rawvideo'   # path of CAS(ME)^2 dataset
+    folder_data = '/dataset/CAS(ME)^2/rawvideo'   # path of CAS(ME)^2 dataset
     subfolders = os.listdir(folder_data)
     TP = []
     GT_num = []
