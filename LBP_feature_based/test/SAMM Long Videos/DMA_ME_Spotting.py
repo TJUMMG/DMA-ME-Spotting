@@ -239,7 +239,7 @@ def get_spotted_intervals_for_video(video_name, window_len_1, kl_1, kr_1, peakl_
 
 def Evaluate_SAMM_Long_Videos(window_len_1, kl_1, kr_1, peakl_1, peakr_1, p_1, window_len_2, kl_2, kr_2, peakl_2, peakr_2, p_2, window_len_3, peaklr_len_3, p_3,
                               window_len_4, kl_4, kr_4, peakl_4, peakr_4, p_4, window_len_5, kl_5, kr_5, peakl_5, peakr_5, p_5, window_len_6, peaklr_len_6, p_6):
-    folder_data = r'D:\ME_Database_Download\SAMM\SAMM_longvideos'  # path of SAMM Long Videos dataset
+    folder_data ='/dataset/SAMM/SAMM_longvideos'  # path of SAMM Long Videos dataset
     TP = []
     GT_num = []
     SPOT_num = []
