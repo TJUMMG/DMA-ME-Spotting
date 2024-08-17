@@ -6,10 +6,9 @@ import xlrd
 import xlwt
 
 
-p68 = r'..\landmark_model\shape_predictor_68_face_landmarks.dat'
+p68 = "/landmark_model/shape_predictor_68_face_landmarks.dat"
 detector = dlib.get_frontal_face_detector()
 predictor_68 = dlib.shape_predictor(p68)
-
 
 def ChiSquare_dist(np1, np2):
     np_shape = np1.shape[0]
@@ -51,11 +50,11 @@ def calculate_distance_block(curr_fea_blks, hf_fea_blks, tf_fea_blks):
 
 def calculate_contrast_difference(dataset, video_file, window_len):
     print("Starting !!")
-    video_name = video_file.split('\\')[-1]
+    video_name = video_file.split('/')[-1]
     if dataset == 'CASme2':
-        feature_path = r'..\..\..\results\features\CAS(ME)^2_LBP_features' + '\\' + 's' + video_name[:2] + '\\' + video_name[:-4] + '_features.xls'
+        feature_path = '/results/features/CAS(ME)^2_LBP_features' + '/' + 's' + video_name[:2] + '/' + video_name[:-4] + '_features.xls'
     elif dataset == 'SAMM Long Videos':
-        feature_path = r'..\..\..\results\features\SAMM_Long_Videos_LBP_features' + '\\' + video_name + '_features.xls'
+        feature_path = '/results/features/SAMM_Long_Videos_LBP_features' + '/' + video_name + '_features.xls'
     else:
         print("Error! The parameter 'dataset' has two options: 'CASme2' and 'SAMM Long Videos'.")
     
@@ -111,10 +110,10 @@ def calculate_contrast_difference(dataset, video_file, window_len):
 
 
 def save_contrast_differences_for_CASme2(window_len):
-    rst_path = r'..\..\..\results\contrast differences\CAS(ME)^2_LBP_contrast_differences' + '\\' + 'window_len_' + str(window_len)
+    rst_path = '/results/contrast_differences/CAS(ME)^2_LBP_contrast_differences' + '/' + 'window_len_' + str(window_len)
     if not os.path.exists(rst_path):
         os.mkdir(rst_path)
-    folder_data = r'D:\ME_Database_Download\CAS(ME)^2\rawvideo'   # path of CAS(ME)^2 dataset
+    folder_data = " "   # path of CAS(ME)^2 dataset
     subfolders = os.listdir(folder_data)
 
     for sub_folder in subfolders:
@@ -145,10 +144,10 @@ def save_contrast_differences_for_CASme2(window_len):
 
 
 def save_contrast_differences_for_SAMM_Long_Videos(window_len):
-    rst_path = r'..\..\..\results\contrast differences\SAMM_Long_Videos_LBP_contrast_differences' + '\\' + 'window_len_' + str(window_len)
+    rst_path = '/results/contrast_differences/SAMM_Long_Videos_LBP_contrast_differences' + '/' + 'window_len_' + str(window_len)
     if not os.path.exists(rst_path):
         os.mkdir(rst_path)
-    folder_data = r'D:\ME_Database_Download\SAMM\SAMM_longvideos'  # path of SAMM Long Videos dataset
+    folder_data = " "  # path of SAMM Long Videos dataset
     vidfolders = os.listdir(folder_data)
 
     for vidname in vidfolders:
