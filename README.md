@@ -24,13 +24,14 @@ Secondly, run the following codes to reproduce the LBP feature based results pro
 ```
 $ python extract_feature.py
 ```
-(2) Calculate contrast differences. In the folder "LBP_feature_based/calculate_contrast_differences", run the Python code:
+(2) Calculate contrast differences. In the folder "LBP_feature_based/calculate_contrast_differences", run the following codes to calculate the contrast differences of the extracted LBP features by symmetric or asymmetric windows of CAS(ME)^2 and SAMM Long Videos:
 ```
-$ python calculate_contrast_difference_symmetric_window.py  % calculate the contrast differences of the extracted LBP features by symmetric windows of CAS(ME)^2 and SAMM Long Videos
-$ python calculate_contrast_difference_asymmetric_window.py  % calculate the contrast differences of the extracted LBP features by asymmetric windows of CAS(ME)^2 and SAMM Long Videos
+$ python calculate_contrast_difference_symmetric_window.py  
+$ python calculate_contrast_difference_asymmetric_window.py 
 ```
 (3) Reproduce spotting results. 
 In the folder "LBP_feature_based/test/CAS(ME)^2", run the following codes for testing CAS(ME)^2 dataset:
+
 To reproduce the spotting results of single scale symmetric windows and single scale asymmetric windows, run the Python codes:
 ```
 $ python single_scale_symmetric_window.py  
@@ -38,8 +39,8 @@ $ python single_scale_asymmetric_window.py
 ```
 To reproduce the fusion results of multi-scale windows and multi-mode windows, run the Python codes:
 ```
-$ python multiple_scales_fusion.py  % reproduce the fusion results of multi-scale windows
-$ python multiple_modes_fusion.py  % reproduce the fusion results of multi-mode windows
+$ python multiple_scales_fusion.py  
+$ python multiple_modes_fusion.py  
 ```
 To reproduce the fusion results of our proposed duration & mode-aware ME spotting method (multi-scale and multi-mode sliding windows), run the Python codes:
 ```
@@ -47,12 +48,14 @@ $ python D&M-A_ME_Spotting.py
 ```
 
 In the folder “LBP_feature_based/test/SAMM Long Videos”, runn the following codes for testing SAMM Long Videos dataset:
+
 To reproduce the fusion results of our proposed duration & mode-aware ME spotting method (multi-scale and multi-mode sliding windows), run the Python codes:
 ```
 $ python D&M-A_ME_Spotting.py 
 ```
 
 Thirdly, run the following codes to reproduce the MDMO feature (SP-pattern) based results provided in the paper:
+
 (1) Extract MDMO features. 
 In the folder "MDMO_feature_based/extract_features", run the Python codes:
 ```
