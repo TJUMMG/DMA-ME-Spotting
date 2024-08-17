@@ -8,7 +8,7 @@ import cmath
 
 def get_MDMO_feature_excel_for_video(video_file):
     print("Starting !!")
-    local_OF_path = r'..\..\..\results\features\CAS(ME)^2_11ROIs_local_OFs' + '\\' + video_file.split('\\')[-1][:7] + '_11ROIs_local_OF_features.mat'
+    local_OF_path = "/results/features/CAS(ME)^2_11ROIs_local_OFs" + '/' + video_file.split('/')[-1][:7] + '_11ROIs_local_OF_features.mat'
 
     data = sio.loadmat(local_OF_path)
     ROIs_local_OF_features = data['ROIs_local_OF_features']
@@ -600,10 +600,10 @@ def get_MDMO_feature_excel_for_video(video_file):
 
 
 def save_MDMO_features_for_CASme2():
-    rst_path = r'..\..\..\results\features\CAS(ME)^2_11ROIs_MDMO_features'
+    rst_path ="/results/features/CAS(ME)^2_11ROIs_MDMO_features'
     if not os.path.exists(rst_path):
         os.mkdir(rst_path)
-    folder_data = r'D:\ME_Database_Download\CAS(ME)^2\rawvideo'   # path of CAS(ME)^2 dataset
+    folder_data ="/datasets/CAS(ME)^2/rawvideo'   # path of CAS(ME)^2 dataset
     subfolders = os.listdir(folder_data)
 
     for sub_folder in subfolders:
