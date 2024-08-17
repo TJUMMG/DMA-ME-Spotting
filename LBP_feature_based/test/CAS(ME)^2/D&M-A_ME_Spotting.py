@@ -25,7 +25,7 @@ def calculate_IOU(interval1, interval2):
 
 
 def get_GT_intervals_for_video(sub, video_name):
-    workpath = r'D:\ME_Database_Download\CAS(ME)^2\CAS(ME)^2code_final.xlsx'  # path of CAS(ME)^2 label file
+    workpath ="datasets/CAS(ME)^2/CAS(ME)^2code_final.xlsx"  # path of CAS(ME)^2 label file
     data = xlrd.open_workbook(workpath)
     code_final = data.sheet_by_name('CASMEcode_final')
     name_rule1 = data.sheet_by_name('naming rule1')
@@ -63,8 +63,8 @@ def get_GT_intervals_for_video(sub, video_name):
 
 def get_spotted_interval_for_video(video_name, window_len_1, kl_1, kr_1, peakl_1, peakr_1, p_1, window_len_2, kl_2, kr_2, peakl_2, peakr_2, p_2, window_len_3, peaklr_len_3, p_3, window_len_4, kl_4, kr_4, peakl_4, peakr_4, p_4, window_len_5, kl_5, kr_5, peakl_5, peakr_5, p_5, window_len_6, peaklr_len_6, p_6):
     # scale1-asymmetric1
-    rst_path_1 = r'..\..\..\results\contrast differences\CAS(ME)^2_LBP_contrast_differences' + '\\' + 'window_len_' + str(window_len_1) + '_kl_' + str(kl_1) + '_kr_' + str(kr_1)
-    workpath_1 = rst_path_1 + '\\' + 's' + video_name[:2] + '\\' + video_name[:-4] + '\\' + 'contrast_differences.xls'
+    rst_path_1 ='/results/contrast_differences/CAS(ME)^2_LBP_contrast_differences' + '/' + 'window_len_' + str(window_len_1) + '_kl_' + str(kl_1) + '_kr_' + str(kr_1)
+    workpath_1 = rst_path_1 + '/' + 's' + video_name[:2] + '/' + video_name[:-4] + '/' + 'contrast_differences.xls'
     data_1 = xlrd.open_workbook(workpath_1)
     data_v_1 = data_1.sheet_by_name('sheet1')
     rowNum_dv_1 = data_v_1.nrows
@@ -79,8 +79,8 @@ def get_spotted_interval_for_video(video_name, window_len_1, kl_1, kr_1, peakl_1
     Thr_1 = Cmean_1 + epsilon_1 * (Cmax_1 - Cmean_1)
 
     # scale1-asymmetric2
-    rst_path_2 = r'..\..\..\results\contrast differences\CAS(ME)^2_LBP_contrast_differences' + '\\' + 'window_len_' + str(window_len_2) + '_kl_' + str(kl_2) + '_kr_' + str(kr_2)
-    workpath_2 = rst_path_2 + '\\' + 's' + video_name[:2] + '\\' + video_name[:-4] + '\\' + 'contrast_differences.xls'
+    rst_path_2 ='/results/contrast_differences/CAS(ME)^2_LBP_contrast_differences' + '/' + 'window_len_' + str(window_len_2) + '_kl_' + str(kl_2) + '_kr_' + str(kr_2)
+    workpath_2 = rst_path_2 + '/' + 's' + video_name[:2] + '/' + video_name[:-4] + '/' + 'contrast_differences.xls'
     data_2 = xlrd.open_workbook(workpath_2)
     data_v_2 = data_2.sheet_by_name('sheet1')
     rowNum_dv_2 = data_v_2.nrows
@@ -95,8 +95,8 @@ def get_spotted_interval_for_video(video_name, window_len_1, kl_1, kr_1, peakl_1
     Thr_2 = Cmean_2 + epsilon_2 * (Cmax_2 - Cmean_2)
 
     # scale1-symmetric
-    rst_path_3 = r'..\..\..\results\contrast differences\CAS(ME)^2_LBP_contrast_differences' + '\\' + 'window_len_' + str(window_len_3)
-    workpath_3 = rst_path_3 + '\\' + 's' + video_name[:2] + '\\' + video_name[:-4] + '\\' + 'contrast_differences.xls'
+    rst_path_3 = '/results/contrast_differences/CAS(ME)^2_LBP_contrast_differences' + '/' + 'window_len_' + str(window_len_3)
+    workpath_3 = rst_path_3 + '/' + 's' + video_name[:2] + '/' + video_name[:-4] + '/' + 'contrast_differences.xls'
     data_3 = xlrd.open_workbook(workpath_3)
     data_v_3 = data_3.sheet_by_name('sheet1')
     rowNum_dv_3 = data_v_3.nrows
@@ -111,8 +111,8 @@ def get_spotted_interval_for_video(video_name, window_len_1, kl_1, kr_1, peakl_1
     Thr_3 = Cmean_3 + epsilon_3 * (Cmax_3 - Cmean_3)
 
     # scale2-asymmetric1
-    rst_path_4 = r'..\..\..\results\contrast differences\CAS(ME)^2_LBP_contrast_differences' + '\\' + 'window_len_' + str(window_len_4) + '_kl_' + str(kl_4) + '_kr_' + str(kr_4)
-    workpath_4 = rst_path_4 + '\\' + 's' + video_name[:2] + '\\' + video_name[:-4] + '\\' + 'contrast_differences.xls'
+    rst_path_4 = '/results/contrast_differences/CAS(ME)^2_LBP_contrast_differences' + '/' + 'window_len_' + str(window_len_4) + '_kl_' + str(kl_4) + '_kr_' + str(kr_4)
+    workpath_4 = rst_path_4 + '/' + 's' + video_name[:2] + '/' + video_name[:-4] + '/' + 'contrast_differences.xls'
     data_4 = xlrd.open_workbook(workpath_4)
     data_v_4 = data_4.sheet_by_name('sheet1')
     rowNum_dv_4 = data_v_4.nrows
@@ -127,8 +127,8 @@ def get_spotted_interval_for_video(video_name, window_len_1, kl_1, kr_1, peakl_1
     Thr_4 = Cmean_4 + epsilon_4 * (Cmax_4 - Cmean_4)
 
     # scale2-asymmetric2
-    rst_path_5 = r'..\..\..\results\contrast differences\CAS(ME)^2_LBP_contrast_differences' + '\\' + 'window_len_' + str(window_len_5) + '_kl_' + str(kl_5) + '_kr_' + str(kr_5)
-    workpath_5 = rst_path_5 + '\\' + 's' + video_name[:2] + '\\' + video_name[:-4] + '\\' + 'contrast_differences.xls'
+    rst_path_5 ='/results/contrast_differences\CAS(ME)^2_LBP_contrast_differences' + '/' + 'window_len_' + str(window_len_5) + '_kl_' + str(kl_5) + '_kr_' + str(kr_5)
+    workpath_5 = rst_path_5 + '/' + 's' + video_name[:2] + '/' + video_name[:-4] + '/' + 'contrast_differences.xls'
     data_5 = xlrd.open_workbook(workpath_5)
     data_v_5 = data_5.sheet_by_name('sheet1')
     rowNum_dv_5 = data_v_5.nrows
@@ -143,8 +143,8 @@ def get_spotted_interval_for_video(video_name, window_len_1, kl_1, kr_1, peakl_1
     Thr_5 = Cmean_5 + epsilon_5 * (Cmax_5 - Cmean_5)
 
     # scale2-symmetric
-    rst_path_6 = r'..\..\..\results\contrast differences\CAS(ME)^2_LBP_contrast_differences' + '\\' + 'window_len_' + str(window_len_6)
-    workpath_6 = rst_path_6 + '\\' + 's' + video_name[:2] + '\\' + video_name[:-4] + '\\' + 'contrast_differences.xls'
+    rst_path_6 = '/results/contrast_differences/CAS(ME)^2_LBP_contrast_differences' + '/' + 'window_len_' + str(window_len_6)
+    workpath_6 = rst_path_6 + '/' + 's' + video_name[:2] + '/' + video_name[:-4] + '/' + 'contrast_differences.xls'
     data_6 = xlrd.open_workbook(workpath_6)
     data_v_6 = data_6.sheet_by_name('sheet1')
     rowNum_dv_6 = data_v_6.nrows
@@ -352,7 +352,7 @@ def Evaluate_CASme2(window_len_1, kl_1, kr_1, peakl_1, peakr_1, p_1, window_len_
     print(" Precision - Recall - F1 ", Precision, Recall, F1)
 
     # save spotting results
-    rst_save_path = os.getcwd() + r'\spotting_results_record.xlsx'
+    rst_save_path = os.getcwd() + '/'+ 'spotting_results_record_1.xlsx'
     DF.to_excel(rst_save_path)
 
 
