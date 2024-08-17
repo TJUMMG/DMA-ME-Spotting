@@ -6,7 +6,7 @@ import xlsxwriter
 from imutils import face_utils
 
 
-p68 = "/ME_spotting/DMA_ME_spotting/code/landmark_model/shape_predictor_68_face_landmarks.dat" 
+p68 = "/landmark_model/shape_predictor_68_face_landmarks.dat" 
 detector = dlib.get_frontal_face_detector()
 predictor_68 = dlib.shape_predictor(p68)
 
@@ -82,7 +82,7 @@ def get_facial_region(image):
 
 
 def extract_LBP_features_for_video(video_file):
-    save_path = "/DMA_ME_spotting/results/features/CAS(ME)^2_LBP_features" + '/' + video_file.split('/')[-2] "
+    save_path = "/results/features/CAS(ME)^2_LBP_features" + '/' + video_file.split('/')[-2] "
     if not os.path.exists(save_path):
         os.mkdir(save_path)
 
@@ -140,7 +140,7 @@ def extract_LBP_features_for_video(video_file):
 
 
 def extract_LBP_features_for_sequence(video_file):
-    save_path = "/DMA_ME_spotting/results/features/SAMM_Long_Videos_LBP_features"
+    save_path = "/results/features/SAMM_Long_Videos_LBP_features"
     if not os.path.exists(save_path):
         os.mkdir(save_path)
 
