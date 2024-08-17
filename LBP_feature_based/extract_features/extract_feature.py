@@ -6,7 +6,7 @@ import xlsxwriter
 from imutils import face_utils
 
 
-p68 = r'..\..\landmark_model\shape_predictor_68_face_landmarks.dat'
+p68 = "/ME_spotting/DMA_ME_spotting/code/landmark_model/shape_predictor_68_face_landmarks.dat" 
 detector = dlib.get_frontal_face_detector()
 predictor_68 = dlib.shape_predictor(p68)
 
@@ -82,7 +82,7 @@ def get_facial_region(image):
 
 
 def extract_LBP_features_for_video(video_file):
-    save_path = r'..\..\..\results\features\CAS(ME)^2_LBP_features' + '\\' + video_file.split('\\')[-2]
+    save_path = "/DMA_ME_spotting/results/features/CAS(ME)^2_LBP_features" + '/' + video_file.split('/')[-2] "
     if not os.path.exists(save_path):
         os.mkdir(save_path)
 
@@ -120,7 +120,7 @@ def extract_LBP_features_for_video(video_file):
     cap.release()
 
     # save results, 37 sheets
-    save_file = os.path.join(save_path, video_file.split('\\')[-1][:-4] + '_features.xls')
+   save_file = os.path.join(save_path, video_file.split('/')[-1][:-4] + '_features.xls')
     workbook = xlsxwriter.Workbook(save_file)
     for i_sheet in range(0, 37):
         worksheet = workbook.add_worksheet('sheet'+str(i_sheet))
@@ -140,7 +140,7 @@ def extract_LBP_features_for_video(video_file):
 
 
 def extract_LBP_features_for_sequence(video_file):
-    save_path = r'..\..\..\results\features\SAMM_Long_Videos_LBP_features'
+    save_path = "/DMA_ME_spotting/results/features/SAMM_Long_Videos_LBP_features"
     if not os.path.exists(save_path):
         os.mkdir(save_path)
 
@@ -175,7 +175,7 @@ def extract_LBP_features_for_sequence(video_file):
         print('Have processed', idx, 'frames.')
 
     # save results, 37 sheets
-    save_file = os.path.join(save_path, video_file.split('\\')[-1] + '_features.xls')
+    save_file = os.path.join(save_path, video_file.split('/')[-1] + '_features.xls')
     workbook = xlsxwriter.Workbook(save_file)
     for i_sheet in range(0, 37):
         worksheet = workbook.add_worksheet('sheet' + str(i_sheet))
@@ -194,7 +194,7 @@ def extract_LBP_features_for_sequence(video_file):
 
 
 def save_LBP_features_for_CASme2():
-    folder_data = r'D:\ME_Database_Download\CAS(ME)^2\rawvideo'   # path of CAS(ME)^2 dataset
+    folder_data = " "   # path of CAS(ME)^2 dataset
     subfolders = os.listdir(folder_data)
 
     for sub_folder in subfolders:
@@ -207,7 +207,7 @@ def save_LBP_features_for_CASme2():
 
 
 def save_LBP_features_for_SAMM_Long_Videos():
-    folder_data = r'D:\ME_Database_Download\SAMM\SAMM_longvideos'  # path of SAMM Long Videos dataset
+    folder_data = " "  # path of SAMM Long Videos dataset
     vidfolders = os.listdir(folder_data)
 
     for vidname in vidfolders:
