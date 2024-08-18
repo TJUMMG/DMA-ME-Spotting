@@ -127,7 +127,7 @@ def get_spotted_interval_for_video(video_name, window_len_1, kl_1, kr_1, peakl_1
     Thr_4 = Cmean_4 + epsilon_4 * (Cmax_4 - Cmean_4)
 
     # scale2-asymmetric2
-    rst_path_5 ='/results/contrast_differences\CAS(ME)^2_LBP_contrast_differences' + '/' + 'window_len_' + str(window_len_5) + '_kl_' + str(kl_5) + '_kr_' + str(kr_5)
+    rst_path_5 ='/results/contrast_differences/CAS(ME)^2_LBP_contrast_differences' + '/' + 'window_len_' + str(window_len_5) + '_kl_' + str(kl_5) + '_kr_' + str(kr_5)
     workpath_5 = rst_path_5 + '/' + 's' + video_name[:2] + '/' + video_name[:-4] + '/' + 'contrast_differences.xls'
     data_5 = xlrd.open_workbook(workpath_5)
     data_v_5 = data_5.sheet_by_name('sheet1')
@@ -259,7 +259,7 @@ def get_spotted_interval_for_video(video_name, window_len_1, kl_1, kr_1, peakl_1
 
 def Evaluate_CASme2(window_len_1, kl_1, kr_1, peakl_1, peakr_1, p_1, window_len_2, kl_2, kr_2, peakl_2, peakr_2, p_2, window_len_3, peaklr_len_3, p_3,
                     window_len_4, kl_4, kr_4, peakl_4, peakr_4, p_4, window_len_5, kl_5, kr_5, peakl_5, peakr_5, p_5, window_len_6, peaklr_len_6, p_6):
-    folder_data = r'D:\ME_Database_Download\CAS(ME)^2\rawvideo'   # path of CAS(ME)^2 dataset
+    folder_data = '/datasets/CAS(ME)^2/rawvideo'   # path of CAS(ME)^2 dataset
     subfolders = os.listdir(folder_data)
     TP = []
     GT_num = []
