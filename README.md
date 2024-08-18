@@ -46,7 +46,7 @@ To reproduce the fusion results of our proposed duration & mode-aware ME spottin
 $ python D&M-A_ME_Spotting.py  
 ```
 
-In the folder “LBP_feature_based/test/SAMM Long Videos”, runn the following codes for testing SAMM Long Videos dataset:
+In the folder “LBP_feature_based/test/SAMM Long Videos”, run the following codes for testing SAMM Long Videos dataset:
 
 To reproduce the fusion results of our proposed duration & mode-aware ME spotting method (multi-scale and multi-mode sliding windows), run the Python codes:
 ```
