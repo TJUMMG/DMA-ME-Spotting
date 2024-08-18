@@ -113,7 +113,7 @@ def save_contrast_differences_for_CASme2(window_len):
     rst_path = '/results/contrast_differences/CAS(ME)^2_LBP_contrast_differences' + '/' + 'window_len_' + str(window_len)
     if not os.path.exists(rst_path):
         os.mkdir(rst_path)
-    folder_data = " "   # path of CAS(ME)^2 dataset
+    folder_data = "/dataset/CAS(ME)^2/rawvideo"   # path of CAS(ME)^2 dataset
     subfolders = os.listdir(folder_data)
 
     for sub_folder in subfolders:
@@ -147,7 +147,7 @@ def save_contrast_differences_for_SAMM_Long_Videos(window_len):
     rst_path = '/results/contrast_differences/SAMM_Long_Videos_LBP_contrast_differences' + '/' + 'window_len_' + str(window_len)
     if not os.path.exists(rst_path):
         os.mkdir(rst_path)
-    folder_data = " "  # path of SAMM Long Videos dataset
+    folder_data = "/dataset/SAMM/SAMM_longvideos"  # path of SAMM Long Videos dataset
     vidfolders = os.listdir(folder_data)
 
     for vidname in vidfolders:
