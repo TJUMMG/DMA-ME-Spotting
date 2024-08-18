@@ -404,11 +404,11 @@ def spotting(label_path, base_path, parameter_path, window_len_1, window_len_2, 
 
     dirs = os.listdir(base_path)
     for i in range(len(dirs)):
-        dir_path = base_path + '\\' + dirs[i]
+        dir_path = base_path + '/' + dirs[i]
         files = os.listdir(dir_path)
         for j in range(len(files)):
             parameter_count += 1
-            file_path = dir_path + '\\' + files[j]
+            file_path = dir_path + '/' + files[j]
             print(file_path)
             no_spot += 1
             no_spot_list.append(files[j][:7])
@@ -489,14 +489,14 @@ def spotting(label_path, base_path, parameter_path, window_len_1, window_len_2, 
     print('no_spot_list', no_spot_list)
 
     # save spotting results
-    rst_save_path = os.getcwd() + r'\spotting_results_record.xlsx'
+    rst_save_path = os.getcwd() + '/spotting_results_record.xlsx'
     DF.to_excel(rst_save_path)
 
 
 def main():
-    label_path = r'D:\ME_Database_Download\CAS(ME)^2\CAS(ME)^2code_final.xlsx'  # path of CAS(ME)^2 label file
-    MDMO_features_path = r'..\..\..\results\features\CAS(ME)^2_11ROIs_MDMO_features'
-    parameter_path = os.getcwd() + r'\Savitzky-golay_parameters.xlsx'
+    label_path = 'dataset/CAS(ME)^2/CAS(ME)^2code_final.xlsx'  # path of CAS(ME)^2 label file
+    MDMO_features_path = '/results/features/CAS(ME)^2_11ROIs_MDMO_features'
+    parameter_path = os.getcwd() + '/Savitzky-golay_parameters.xlsx'
     spotting(label_path, MDMO_features_path, parameter_path, window_len_1=11, window_len_2=11, kl_2=4, kr_2=6, window_len_3=11, kl_3=6, kr_3=4, window_len_4=15, window_len_5=15, kl_5=6, kr_5=8, window_len_6=15, kl_6=8, kr_6=6)
 
 
