@@ -328,7 +328,7 @@ def Evaluate_SAMM_Long_Videos(window_len_1, kl_1, kr_1, peakl_1, peakr_1, p_1, w
     print(" Precision - Recall - F1 ", Precision, Recall, F1)
 
     # save spotting results
-    rst_save_path = os.getcwd() + r'\spotting_results_record.xlsx'
+    rst_save_path = os.getcwd() + '/spotting_results_record.xlsx'
     DF.to_excel(rst_save_path)
 
 
