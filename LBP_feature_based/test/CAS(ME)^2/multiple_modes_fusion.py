@@ -95,7 +95,7 @@ def get_spotted_intervals_for_video(video_name, window_len_1, kl_1, kr_1, peakl_
     Thr_2 = Cmean_2 + epsilon_2 * (Cmax_2 - Cmean_2)
 
     # symmetric_window_3
-    rst_path_3 ='/results/contrast differences/CAS(ME)^2_LBP_contrast_differences' + '/' + 'window_len_' + str(window_len_3)
+    rst_path_3 ='/results/contrast_differences/CAS(ME)^2_LBP_contrast_differences' + '/' + 'window_len_' + str(window_len_3)
     workpath_3 = rst_path_3 + '/' + 's' + video_name[:2] + '/' + video_name[:-4] + '/' + 'contrast_differences.xls'
     data_3 = xlrd.open_workbook(workpath_3)
     data_v_3 = data_3.sheet_by_name('sheet1')
