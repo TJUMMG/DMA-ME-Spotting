@@ -603,7 +603,7 @@ def save_MDMO_features_for_CASme2():
     rst_path ="/results/features/CAS(ME)^2_11ROIs_MDMO_features'
     if not os.path.exists(rst_path):
         os.mkdir(rst_path)
-    folder_data ="/datasets/CAS(ME)^2/rawvideo'   # path of CAS(ME)^2 dataset
+    folder_data ="/dataset/CAS(ME)^2/rawvideo'   # path of CAS(ME)^2 dataset
     subfolders = os.listdir(folder_data)
 
     for sub_folder in subfolders:
