@@ -5,7 +5,7 @@ import scipy.io as sio
 
 def get_11ROIs_local_OFs_for_video(video_file):
     print("Starting !!")
-    OF_path = r'..\..\..\results\features\CAS(ME)^2_12ROIs_OFs' + '\\'+ video_file.split('\\')[-1][:7] + '_12ROIs_OF_features.mat'
+    OF_path = '/results/features\CAS(ME)^2_12ROIs_OFs' + '/'+ video_file.split('/')[-1][:7] + '_12ROIs_OF_features.mat'
 
     data = sio.loadmat(OF_path)
     ROIs_OF_features = data['ROIs_OF_features']
@@ -131,11 +131,11 @@ def get_11ROIs_local_OFs_for_video(video_file):
 
 
 def save_11ROIs_local_OFs_for_CASme2():
-    save_path = r'..\..\..\results\features\CAS(ME)^2_11ROIs_local_OFs'
+    save_path = '/results/features/CAS(ME)^2_11ROIs_local_OFs'
     if not os.path.exists(save_path):
         os.mkdir(save_path)
 
-    folder_data = r'D:\ME_Database_Download\CAS(ME)^2\rawvideo'   # path of CAS(ME)^2 dataset
+    folder_data = '/ddataset/CAS(ME)^2/rawvideo'   # path of CAS(ME)^2 dataset
     subfolders = os.listdir(folder_data)
 
     for sub_folder in subfolders:
