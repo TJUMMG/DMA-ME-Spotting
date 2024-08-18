@@ -194,7 +194,7 @@ def extract_LBP_features_for_sequence(video_file):
 
 
 def save_LBP_features_for_CASme2():
-    folder_data = " "   # path of CAS(ME)^2 dataset
+    folder_data = "/dataset/CAS(ME)^2/rawvideo "   # path of CAS(ME)^2 dataset
     subfolders = os.listdir(folder_data)
 
     for sub_folder in subfolders:
@@ -207,7 +207,7 @@ def save_LBP_features_for_CASme2():
 
 
 def save_LBP_features_for_SAMM_Long_Videos():
-    folder_data = " "  # path of SAMM Long Videos dataset
+    folder_data = "/dataset/SAMM/SAMM_longvideos "  # path of SAMM Long Videos dataset
     vidfolders = os.listdir(folder_data)
 
     for vidname in vidfolders:
