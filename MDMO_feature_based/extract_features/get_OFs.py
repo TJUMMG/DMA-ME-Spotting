@@ -6,7 +6,7 @@ from imutils import face_utils
 import scipy.io as sio
 
 
-p68 = r'..\..\landmark_model\shape_predictor_68_face_landmarks.dat'
+p68 = '/landmark_model/shape_predictor_68_face_landmarks.dat'
 detector = dlib.get_frontal_face_detector()
 predictor_68 = dlib.shape_predictor(p68)
 
@@ -58,7 +58,7 @@ def get_12ROIs(image, detected_face):
 
 
 def extract_12ROIs_OFs_for_video(video_file):
-    save_path = r'..\..\..\results\features\CAS(ME)^2_12ROIs_OFs'
+    save_path ='/results/features/CAS(ME)^2_12ROIs_OFs'
     if not os.path.exists(save_path):
         os.mkdir(save_path)
 
@@ -162,14 +162,14 @@ def extract_12ROIs_OFs_for_video(video_file):
                         ROI7_OF_features, ROI8_OF_features, ROI9_OF_features, ROI10_OF_features, ROI11_OF_features, ROI12_OF_features]
 
     # save results
-    save_file = os.path.join(save_path, video_file.split('\\')[-1][:7] + '_12ROIs_OF_features.mat')
+    save_file = os.path.join(save_path, video_file.split('/')[-1][:7] + '_12ROIs_OF_features.mat')
     sio.savemat(save_file, {'ROIs_frames': ROIs_frames, 'ROIs_OF_features': ROIs_OF_features})
 
     print('Saving...')
 
 
 def save_12ROIs_OFs_for_CASme2():
-    folder_data = r'D:\ME_Database_Download\CAS(ME)^2\rawvideo'   # path of CAS(ME)^2 dataset
+    folder_data = '/dataset/CAS(ME)^2/rawvideo'   # path of CAS(ME)^2 dataset
     subfolders = os.listdir(folder_data)
 
     for sub_folder in subfolders:
