@@ -3,7 +3,7 @@ Copyrighht(c) 2024 Jing Liu
 
 ```
 If you use this code, please cite the following publication:
-J. Liu, X. Li, G. Zhai, "Duration-Aware-and-Mode-Aware-Micro-Expression-Spotting-for-Long-Video-Sequences", to appear in Displays.
+J. Liu, X. Li, J. Zhang, "Duration-Aware-and-Mode-Aware-Micro-Expression-Spotting-for-Long-Video-Sequences", to appear in Displays.
 ```
 
 ## Contents
