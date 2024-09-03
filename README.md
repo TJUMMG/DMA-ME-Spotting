@@ -3,21 +3,58 @@ Copyrighht(c) 2024 Jing Liu
 
 ```
 If you use this code, please cite the following publication:
-J. Liu, X. Li, J. Zhang, "Duration-Aware-and-Mode-Aware-Micro-Expression-Spotting-for-Long-Video-Sequences", to appear in Displays.
+J. Liu, X. Li, J. Zhang et al., "Duration-Aware-and-Mode-Aware-Micro-Expression-Spotting-for-Long-Video-Sequences", to appear in Displays.
 ```
 
-## Contents
+## :file_folder: Contents
 
-1. [Environment](#1)
-2. [Test](#2)
+- **[Introduction](#Introduction)**
+- **[Environment](#Environment)**
+- **[Test](#Test)**
+		- **[Download](#Download)**
+		- **[Code](#Code)**
+  
 
-<h3 id="1">Environment</h3>
+## :blue_book:Introduction
+
+Micro-expressions (MEs) are unconscious, instant and slight facial movements, revealing people’s
+true emotions. Locating MEs is a prerequisite of classifying them, while only a few researches
+focus on this task. Among them, sliding window based methods are the most prevalent. Due to
+the differences of individual physiological and psychological mechanisms, and some uncontrollable
+factors, the durations and transition modes of different MEs fluctuate greatly. Limited to fixed window
+scale and mode, traditional sliding window based ME spotting methods fail to capture the motion
+based duration & mode-aware (DMA) ME spotting framework is proposed. Specifically, we exploit
+multiple sliding windows of different scales and modes to generate multiple weak detectors, each of
+which accommodates to MEs with certain duration and transition mode. Additionally, to get a more
+comprehensive strong detector, we integrate the analysis results of multiple weak detectors using a
+voting based aggregation module. Furthermore, a novel interval generation scheme is designed to
+merge close peaks and their neighbor frames into a complete ME interval. 
+
+
+
+![](https://github.com/TJUMMG/DMA-ME-Spotting/blob/master/images/overview.png)
+*Figure 1: Overview of the proposed duration & mode-aware ME spotting method.*
+
+
+
+![](https://github.com/TJUMMG/DMA-ME-Spotting/blob/master/images/illustration.png)
+*Figure 2: Illustration of the proposed DMA-FDA module.*
+
+
+## :bookmark: Environment
 The codes need to run in the environment: Python 3.7.
 
-### Testing
-Firstly, download the two datasets used for experiments: CAS(ME)^2 and SAMM Long Videos and put them in 'dataset' folder. Download “shape_predictor_68_face_landmarks.dat” from the following link: https://pan.baidu.com/s/1_Ml4D6lN1_1HeGAb7kGy1Q with password ‘msfd’ and place it under directory ‘DMA_ME spotting/code/landmark_model’
 
-Secondly, run the following codes to reproduce the LBP feature based results provided in the paper:
+## :computer:Test 
+
+- ### :link:Download
+
+Download CAS(ME)^2 from the link: http://fu.psych.ac.cn/CASME/cas(me)2-en.php and SAMM Long Videos from the link: http://www2.docm.mmu.ac.uk/STAFF/M.Yap/dataset.php
+
+Download “shape_predictor_68_face_landmarks.dat” from the following link: https://pan.baidu.com/s/1_Ml4D6lN1_1HeGAb7kGy1Q with password ‘msfd’ and place it under directory ‘DMA_ME spotting/code/landmark_model’
+
+- ### :bulb:Code
+Run the following codes to reproduce the LBP feature based results provided in the paper:
 
 (1) Run the codes in the folder "LBP_feature_based/extract_features" to extract LBP features:
 ```
@@ -53,7 +90,7 @@ To reproduce the fusion results of our proposed duration & mode-aware ME spottin
 $ python D&M-A_ME_Spotting.py 
 ```
 
-Thirdly, run the following codes to reproduce the MDMO feature (SP-pattern) based results provided in the paper:
+Run the following codes to reproduce the MDMO feature (SP-pattern) based results provided in the paper:
 
 (1) Extract MDMO features. 
 In the folder "MDMO_feature_based/extract_features", run the Python codes:
